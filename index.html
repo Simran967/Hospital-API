@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hospital-API</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.5;
+            background-color: rgb(159, 228, 245);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            
+        }
+
+        ul {
+            background-color: rgb(248, 146, 146);
+            padding: 1em;
+        }
+
+        li {
+            font-size: 0.9em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hospital-API</h1>
+    <h4>Tech Stack: Node.js &amp; Mongo DB</h4>
+    <p>There are 2 types of Users:-</p>
+    <ul>
+        <li>Doctors</li>
+        <li>Patients</li>
+    </ul>
+    <p>Doctors can log in each time a patient visits, the doctor will follow 2 steps:-</p>
+    <ul>
+        <li>Register the patient</li>
+        <li>Create a Report</li>
+    </ul>
+    <p>Patient Report will have the following fields:-</p>
+    <ul>
+        <li>Created by doctor</li>
+        <li>Status Can be either of: [Negative, Travelled-Quarantine, Symptoms-Quarantine, Positive-Admit]</li>
+        <li>Date</li>
+    </ul>
+    <p>Available routes</p>
+    <ul>
+        <li>/doctors/register → with username and password and return success msg response</li>
+        <li>/doctors/login → returns the JWT to be used on successful login</li>
+        <li>/patients/register → register with name and unique phoneNumber</li>
+        <li>/patients/:id/create_report → create report with status of a particular patient</li>
+        <li>/patients/:id/all_reports → List all the reports of a patient oldest to latest</li>
+        <li>/reports/:status → List all the reports of all the patients filtered by a specific status</li>
+    </ul>
+
+</body>
+
+</html>
+

@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "54c8e566-b171-43b5-9d3d-b607daacd2b3",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25775446"
+	},
+	"item": [
+		{
+			"name": "doctors/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "secretkey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Simii\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hospital-api-f3z6.onrender.com/doctors/register",
+					"protocol": "https",
+					"host": [
+						"hospital-api-f3z6",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"doctors",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doctors/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Simran\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hospital-api-f3z6.onrender.com/doctors/login?x-auth-token=secretkey",
+					"protocol": "https",
+					"host": [
+						"hospital-api-f3z6",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"doctors",
+						"login"
+					],
+					"query": [
+						{
+							"key": "x-auth-token",
+							"value": "secretkey"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patients/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZTkxNDU2Zjc3ZDcwYzA1OTBlNTIxYyIsImlhdCI6MTY3NjIxOTUwMSwiZXhwIjoxNjc2MjI5NTAxfQ.H8EPpJI29Iz0X3q-oYKH1rA8tz7WTfYHwHzBFzywfvs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Simiiii\",\r\n    \"phoneNumber\": \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hospital-api-f3z6.onrender.com/patients/register",
+					"protocol": "https",
+					"host": [
+						"hospital-api-f3z6",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"patients",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patients/create-report",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZTkxNDU2Zjc3ZDcwYzA1OTBlNTIxYyIsImlhdCI6MTY3NjIxOTUwMSwiZXhwIjoxNjc2MjI5NTAxfQ.H8EPpJI29Iz0X3q-oYKH1rA8tz7WTfYHwHzBFzywfvs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"createdBy\": \"63e8dc84c2d71f597537ff98\",\r\n      \"status\": \"Negative\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hospital-api-f3z6.onrender.com/patients/:id/create_report",
+					"protocol": "https",
+					"host": [
+						"hospital-api-f3z6",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"patients",
+						":id",
+						"create_report"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "63e8dd9ac2d71f597537ff9d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patients/all_reports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hospital-api-f3z6.onrender.com/patients/:id/all_reports",
+					"protocol": "https",
+					"host": [
+						"hospital-api-f3z6",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"patients",
+						":id",
+						"all_reports"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "63e8dd9ac2d71f597537ff9d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reports/status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hospital-api-f3z6.onrender.com/reports/:status",
+					"protocol": "https",
+					"host": [
+						"hospital-api-f3z6",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"reports",
+						":status"
+					],
+					"variable": [
+						{
+							"key": "status",
+							"value": "Negative"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
